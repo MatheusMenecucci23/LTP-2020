@@ -44,15 +44,15 @@ catch(Exception $e){
 try{
     $pdo= new PDO($dns,$dbuser,$dbpass);
 
-$titulo = "Tudo sobre CMS";
-$autor = "Marilene";
-$conteúdo = "bla bla bla bla";
-$data_criado="2019-02-03 00:00:00";
+    $titulo = "Tudo sobre CMS";
+    $autor = "Marilene";
+    $conteúdo = "bla bla bla bla";
+    $data_criado="2019-02-03 00:00:00";
 
-$sql = "INSERT INTO posts SET título='$titulo', autor='$autor',conteúdo='$conteúdo', data_criado='$data_criado'";
-$sql = $pdo->query($sql);
+    $sql = "INSERT INTO posts SET título='$titulo', autor='$autor',conteúdo='$conteúdo', data_criado='$data_criado'";
+    $sql = $pdo->query($sql);
 
-echo "Título inserido com sucesso ".$pdo->lastInsertId();
+    echo "Título inserido com sucesso ".$pdo->lastInsertId();
 }
 catch(Exception $e){
     echo "Falhou: ".$e->getMessage();
